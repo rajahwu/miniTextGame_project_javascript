@@ -4,7 +4,7 @@
     display: block;
     font-size: 16px;
   }
-  
+  /* create flex container for document */
   body {
     font-family: monospace;
     font-size: 1.3rem;

@@ -12,7 +12,7 @@
         <div id="title" class="title">
           <h3>Item Total Computer</h3>
         </div>
-      
+      <!-- user input -->
         <label for="itemName">What is the name of your first item?</label>
         <input type="text" id="itemName" class="itemName" />
       
@@ -23,12 +23,18 @@
         <input type="text" id="itemQuantity" class="itemQuantity" />
       
         <button id="addItemBtn"> Add Item</button>
-      
+
+      <!-- display output -->
         <div class="container itemList">
           <ul id="itemList">
-            <li>where am i</li>
+            <li class="item"></li>
+            <li class="price"></li>
+            <li class="subtotal"></li>
+            <li class="tax"></li>
+            <li class="total"></li>
           </ul>
         </div>
+
       </div>
     <script src="script.js"></script>
 </body>
