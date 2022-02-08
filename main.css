@@ -14,6 +14,22 @@
     height: 100vh;
     width: 100vw;
   }
+
+  span {
+    display: inline;
+  }
+
+  .warn {
+    color: red;
+  }
+
+  .caution {
+    color: yellow;
+  }
+
+  .safe {
+    color: green;
+  }
   
   .container {
     background-color: #00000b;
