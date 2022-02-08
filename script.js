@@ -17,19 +17,25 @@ let totalDisplay = itemList.querySelector('.total')
 
 
 
+  // let subtotal = itemPrice.value * itemQuantity.value
+  // let tax = parseInt(subtotal) * 0.06
+  // let total = parseInt(subtotal) + tax
+  // console.log(subtotal, tax, total)
+
+
+// add event listeners to add item button
+document.getElementById('addItemBtn').addEventListener('click', displayTotals)
+
+
+function displayTotals() {
   let subtotal = itemPrice.value * itemQuantity.value
   let tax = parseInt(subtotal) * 0.06
   let total = parseInt(subtotal) + tax
   console.log(subtotal, tax, total)
 
-
-// add event listeners to add item button
-document.getElementById('addItemBtn').addEventListener('click', e => {
-  console.log(itemName.value)
   itemDisplay.textContent = `We will price: ${itemName.value}`
   quantityDisplay.textContent = `At a quanity of: ${itemQuantity.value}`
   priceDisplay.textContent = `Your cost before tax is \$${parseInt(subtotal).toFixed(2)}`
   taxDisplay.textContent = `Tax: \$${parseInt(tax).toFixed(2)}`
   totalDisplay.textContent = `Total: \$${parseInt(total).toFixed(2)}`
-
-})
+}
