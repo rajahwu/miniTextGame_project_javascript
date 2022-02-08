@@ -18,32 +18,41 @@ let totalDisplay = itemList.querySelector('.total')
 
 
   let subtotal = itemPrice.value * itemQuantity.value
-  let tax = subtotal * 0.06
-  let total = subtotal + tax
+  let tax = parseInt(subtotal) * 0.06
+  let total = parseInt(subtotal) + tax
   console.log(subtotal, tax, total)
 
+  console.log(typeof(tax))
+  console.log(typeof(subtotal))
+
+  parseInt(tax).toFixed(2)
+
+
+  // console.log(new Intl.NumberFormat('en-US').format(subtotal));
+  // console.log(new Intl.NumberFormat('en-US').format(tax));
+  // console.log(new Intl.NumberFormat('en-US').format(total));
 
 // add event listeners to add item button
 document.getElementById('addItemBtn').addEventListener('click', e => {
   console.log(itemName.value)
-  itemDisplay.textContent = `We will price your ${itemName.value}.`
+  itemDisplay.textContent = `We will price: ${itemName.value}`
 })
 
 document.getElementById('addItemBtn').addEventListener('click', e => {
-  quantityDisplay.textContent = `You've selected a quanity of ${itemQuantity.value}.`
+  quantityDisplay.textContent = `At a quanity of: ${itemQuantity.value}`
 })
 
 document.getElementById('addItemBtn').addEventListener('click', e => {
   console.log(itemPrice.value)
-  priceDisplay.textContent = `Your cost before tax is ${subtotal}`
+  priceDisplay.textContent = `Your cost before tax is \$${parseInt(subtotal).toFixed(2)}`
 })
 
 document.getElementById('addItemBtn').addEventListener('click', e => {
   console.log(tax)
-  taxDisplay.textContent = `Tax: ${tax}`
+  taxDisplay.textContent = `Tax: \$${parseInt(tax).toFixed(2)}`
 })
 
 document.getElementById('addItemBtn').addEventListener('click', e => {
   console.log(itemQuantity.value)
-  totalDisplay.textContent = `Total: ${total}`
+  totalDisplay.textContent = `Total: \$${parseInt(total).toFixed(2)}`
 })

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Monoton&display=swap');
 * {
     background-color: #090957;
     color: white;
@@ -6,7 +7,7 @@
   }
   /* create flex container for document */
   body {
-    font-family: monospace;
+    font-family: 'Inconsolata', monospace;
     font-size: 1.3rem;
     display: flex;
     justify-content: center;
@@ -24,20 +25,22 @@
   }
   
   input {
-    background-color: red;
-    color: blue;
+    background-color: #CC0000;
+    color: #FFFC19;
     border: 1.5px solid white;
     padding: 5px;
   }
   
   input:focus {
-    background-color: #175704;
-    color: red;
+    background-color: #7ccc63;
+    color: #0D0D57;
   }
   
   .title h3 {
     background-color: #00000b;
-    /*   text-align: center */
+    font-family: 'Monoton', cursive;
+    letter-spacing: 1rem;
+    color: yellow;
   }
   
   label {
@@ -49,4 +52,10 @@
     padding: 1.5px;
     background-color: blue;
   }
+
+  .itemList ul {
+    border: 1px solid white;
+  }
+
+  
   
