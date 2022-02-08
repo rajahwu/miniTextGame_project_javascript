@@ -9,15 +9,11 @@ var itemQuantity = document.getElementById('itemQuantity');
 
 // create variable to display user input
 let itemDisplay = itemList.querySelector('.item')
-//console.log(itemDisplay)
 let priceDisplay =  itemList.querySelector('.price')
-//console.log(priceDisplay)
+let quantityDisplay = itemList.querySelector('.quantity')
 let subtotalDisplay = itemList.querySelector('.subtotal')
-//console.log(subtotalDisplay)
 let taxDisplay = itemList.querySelector('.tax')
-//console.log(taxDisplay)
 let totalDisplay = itemList.querySelector('.total')
-//console.log(totalDisplay)
 
 
 
@@ -30,16 +26,24 @@ let totalDisplay = itemList.querySelector('.total')
 // add event listeners to add item button
 document.getElementById('addItemBtn').addEventListener('click', e => {
   console.log(itemName.value)
-  itemDisplay.textContent = itemName.value
+  itemDisplay.textContent = `We will price your ${itemName.value}.`
+})
 
+document.getElementById('addItemBtn').addEventListener('click', e => {
+  quantityDisplay.textContent = `You've selected a quanity of ${itemQuantity.value}.`
 })
 
 document.getElementById('addItemBtn').addEventListener('click', e => {
   console.log(itemPrice.value)
-  priceDisplay.textContent = itemPrice.value
+  priceDisplay.textContent = `Your cost before tax is ${subtotal}`
+})
+
+document.getElementById('addItemBtn').addEventListener('click', e => {
+  console.log(tax)
+  taxDisplay.textContent = `Tax: ${tax}`
 })
 
 document.getElementById('addItemBtn').addEventListener('click', e => {
   console.log(itemQuantity.value)
-  totalDisplay.textContent = itemQuantity.value
+  totalDisplay.textContent = `Total: ${total}`
 })
