@@ -23,12 +23,29 @@
     max-width: 75%;
   }
 
+  .game-text-container {
+    padding-left: 25px;
+  }
+
   .text-window {
-    padding: 25px;
+    padding: 0 25px 25px 25px;
     width: 750px;
     max-width: 75%;
     justify-content: flex-start;
+  }
 
+  .game-text-container h3 {
+    padding-left: 25px;
+  }
+
+  .status-window {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .status-window p {
+    padding: 0;
+    margin: 0;
   }
   
   input {
